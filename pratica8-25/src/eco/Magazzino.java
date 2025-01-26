@@ -22,15 +22,15 @@ public class Magazzino {
     public void addProdotto(Eco o){
         this.elementi.add(o);
     }
-    public boolean removeProdotto(Eco o){
-        for (Eco prodotto : this.elementi){
-            if (prodotto.equals(o)){
-                this.elementi.remove(o);
-                return true;
-            }
-        }
-        return false;
+    public boolean removeProdottoNome(String nomeProdotto){
+        Eco prodotto=ricercaProdottoNome(nomeProdotto);
+        if (prodotto!=null){
+            this.elementi.remove(prodotto);
+            return true;
+        }else
+            return false;
     }
+
     public Eco ricercaProdottoNome(String nomeProdotto) {
         for (Eco prodotto : this.elementi) {
             if (prodotto instanceof ProdottoAlimentare ) {
