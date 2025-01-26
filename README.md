@@ -4,4 +4,4 @@ I prodotti si dividono in prodotti alimentari, suddivisi in deperibili e non dep
 Creare un'interfaccia che definisca un metodo "ecosostenibile".
 
 ## UML
-![uml](https://github.com/user-attachments/assets/8148f6d0-680e-4240-afeb-4eb2a1b22eac)
+![uml](https://github.com/user-attachments/assets/2a5150fe-baab-4dfc-9a77-afe49190a4aa)
