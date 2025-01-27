@@ -4,11 +4,11 @@ public class Deperibile extends ProdottoAlimentare implements Eco{
     private String tipologia;
 
     //Costruttore
-    public Deperibile(String articolo, String codice, int quantita, int giorniConservazione, boolean biologico,double costoBase, String tipologia) throws Exception {
+    public Deperibile(String articolo, String codice, int quantita, int giorniConservazione, boolean biologico,double costoBase, String tipologia) throws IllegalArgumentException{
         super(articolo, codice, quantita, giorniConservazione, biologico,costoBase);
         this.tipologia = tipologia;
     }
-    public Deperibile() throws Exception {
+    public Deperibile() throws IllegalArgumentException{
         super();
         this.tipologia = "Non inserita";
     }

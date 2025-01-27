@@ -9,7 +9,7 @@ public abstract class ProdottoAlimentare{
     private double costoBase;
 
     //Costruttore
-    public ProdottoAlimentare(String articolo, String codice, int quantita, int giorniConservazione, boolean biologico, double costoBase) throws Exception {
+    public ProdottoAlimentare(String articolo, String codice, int quantita, int giorniConservazione, boolean biologico, double costoBase) throws IllegalArgumentException{
         this.articolo = articolo;
         this.codice = codice;
         this.biologico = biologico;
@@ -17,7 +17,7 @@ public abstract class ProdottoAlimentare{
         setGiorniConservazione(giorniConservazione);
         setCostoBase(costoBase);
     }
-    public ProdottoAlimentare() throws Exception {
+    public ProdottoAlimentare() throws IllegalArgumentException {
         this("NON INSERITO","XXXXXX",0,0,false,0.0);
     }
 
@@ -27,25 +27,25 @@ public abstract class ProdottoAlimentare{
     public String getCodice() { return codice; }
     public void setCodice(String codice) { this.codice = codice; }
     public int getQuantita() { return quantita; }
-    public void setQuantita(int quantita) {
+    public void setQuantita(int quantita) throws IllegalArgumentException{
         if (quantita<=0)
-            this.quantita = 1;
+            throw new IllegalArgumentException("Valore errato");
         else
             this.quantita = quantita;
     }
     public int getGiorniConservazione() { return giorniConservazione; }
-    public void setGiorniConservazione(int giorniConservazione) {
+    public void setGiorniConservazione(int giorniConservazione) throws IllegalArgumentException{
         if (giorniConservazione<=0)
-            this.giorniConservazione = 1;
+            throw new IllegalArgumentException("Valore errato");
         else
             this.giorniConservazione = giorniConservazione;
     }
     public boolean isBiologico() { return biologico; }
     public void setBiologico(boolean biologico) { this.biologico = biologico; }
     public double getCostoBase() { return costoBase; }
-    public void setCostoBase(double costoBase) {
+    public void setCostoBase(double costoBase) throws IllegalArgumentException{
         if (costoBase<=0.0)
-            this.costoBase = 0.0;
+            throw new IllegalArgumentException("Valore errato");
         else
             this.costoBase = costoBase;
     }

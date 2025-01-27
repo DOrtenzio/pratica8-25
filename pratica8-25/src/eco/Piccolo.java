@@ -4,11 +4,11 @@ public class Piccolo extends Elettrodomestico implements Eco{
     private String tipologia;
 
     //Costruttore
-    public Piccolo(String articolo, String codice, int quantita, int consumo, double costoBase, String tipologia) {
+    public Piccolo(String articolo, String codice, int quantita, int consumo, double costoBase, String tipologia) throws IllegalArgumentException{
         super(articolo, codice, quantita, consumo,costoBase);
         this.tipologia = tipologia;
     }
-    public Piccolo() {
+    public Piccolo() throws IllegalArgumentException{
         super();
         this.tipologia = "Non inserita";
     }

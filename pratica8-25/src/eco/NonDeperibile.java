@@ -4,11 +4,11 @@ public class NonDeperibile extends ProdottoAlimentare implements Eco{
     private String luogoStoccaggio;
 
     //Costruttore
-    public NonDeperibile(String articolo, String codice, int quantita, int giorniConservazione, boolean biologico,double costoBase, String luogoStoccaggio) throws Exception {
+    public NonDeperibile(String articolo, String codice, int quantita, int giorniConservazione, boolean biologico,double costoBase, String luogoStoccaggio) throws IllegalArgumentException{
         super(articolo, codice, quantita, giorniConservazione, biologico,costoBase);
         this.luogoStoccaggio = luogoStoccaggio;
     }
-    public NonDeperibile() throws Exception {
+    public NonDeperibile() throws IllegalArgumentException {
         super();
         this.luogoStoccaggio = "Non inserito";
     }

@@ -4,11 +4,11 @@ public class Grande extends Elettrodomestico implements Eco {
     private String luogoStoccaggio;
 
     //Costruttore
-    public Grande(String articolo, String codice, int quantita, int consumo, double costoBase, String luogoStoccaggio) {
+    public Grande(String articolo, String codice, int quantita, int consumo, double costoBase, String luogoStoccaggio) throws IllegalArgumentException{
         super(articolo, codice, quantita, consumo,costoBase);
         this.luogoStoccaggio = luogoStoccaggio;
     }
-    public Grande() {
+    public Grande() throws IllegalArgumentException {
         super();
         this.luogoStoccaggio = "Non inserito";
     }

@@ -8,14 +8,14 @@ public abstract class Elettrodomestico {
     private int consumo;
 
     //Costruttore
-    public Elettrodomestico(String articolo, String codice, int quantita, int consumo, double costoBase) {
+    public Elettrodomestico(String articolo, String codice, int quantita, int consumo, double costoBase) throws IllegalArgumentException{
         this.articolo = articolo;
         this.codice = codice;
         setQuantita(quantita);
         setConsumo(consumo);
         setCostoBase(costoBase);
     }
-    public Elettrodomestico(){
+    public Elettrodomestico() throws IllegalArgumentException{
         this("Non inserito","XXXXX",0,0,0.0);
     }
 
@@ -25,23 +25,23 @@ public abstract class Elettrodomestico {
     public String getCodice() { return codice; }
     public void setCodice(String codice) { this.codice = codice; }
     public int getQuantita() { return quantita; }
-    public void setQuantita(int quantita) {
+    public void setQuantita(int quantita) throws IllegalArgumentException{
         if (quantita<=0)
-            this.quantita = 1;
+            throw new IllegalArgumentException("Valore errato");
         else
             this.quantita = quantita;
     }
     public int getConsumo() { return consumo; }
-    public void setConsumo(int consumo) {
+    public void setConsumo(int consumo) throws IllegalArgumentException{
         if (consumo<=0)
-            this.consumo = 0;
+            throw new IllegalArgumentException("Valore errato");
         else
             this.consumo = consumo;
     }
     public double getCostoBase() { return costoBase; }
-    public void setCostoBase(double costoBase) {
+    public void setCostoBase(double costoBase) throws IllegalArgumentException{
         if (costoBase<=0.0)
-            this.costoBase = 0.0;
+            throw new IllegalArgumentException("Valore errato");
         else
             this.costoBase = costoBase;
     }
