@@ -94,13 +94,13 @@ public class Main {
                                 System.out.println("Inserire la tipologia del prodotto");
                                 String tipologia =in.next();
 
-                                magazzino.addProdotto(new Deperibile(articolo,codice,quantita,giorniConservazione,isBiologico,costoBase,tipologia));
+//                                magazzino.addProdotto(new Deperibile(articolo,codice,quantita,giorniConservazione,isBiologico,costoBase,tipologia));
 
-//                                try {
-//                                    magazzino.addProdotto(new Deperibile(articolo,codice,quantita,giorniConservazione,isBiologico,costoBase,tipologia));
-//                                } catch (Exception e) {
-//                                    System.out.println(e.getMessage());
-//                                }
+                                try {
+                                    magazzino.addProdotto(new Deperibile(articolo,codice,quantita,giorniConservazione,isBiologico,costoBase,tipologia));
+                                } catch (Exception e) {
+                                    System.out.println(e.getMessage());
+                                }
 
                                 System.out.println("\n------------------------------\n"+"AGGIUNTO CON SUCCESSO"+"\n------------------------------\n");
                                 break;
@@ -167,13 +167,13 @@ public class Main {
                                 System.out.println("Inserire il luogo di stoccaggio del prodotto");
                                 String luogoDiStoccaggio =in.next();
 
-                                magazzino.addProdotto(new NonDeperibile(articolo1,codice1,quantita1,giorniConservazione1,isBiologico1,costoBase1,luogoDiStoccaggio));
+//                                magazzino.addProdotto(new NonDeperibile(articolo1,codice1,quantita1,giorniConservazione1,isBiologico1,costoBase1,luogoDiStoccaggio));
 
-//                                try {
-//                                    magazzino.addProdotto(new NonDeperibile(articolo1,codice1,quantita1,giorniConservazione1,isBiologico1,costoBase1,luogoDiStoccaggio));
-//                                } catch (Exception e) {
-//                                    System.out.println(e.getMessage());
-//                                }
+                                try {
+                                    magazzino.addProdotto(new NonDeperibile(articolo1,codice1,quantita1,giorniConservazione1,isBiologico1,costoBase1,luogoDiStoccaggio));
+                                } catch (Exception e) {
+                                    System.out.println(e.getMessage());
+                                }
 
                                 System.out.println("\n------------------------------\n"+"AGGIUNTO CON SUCCESSO"+"\n------------------------------\n");
                                 break;
@@ -220,12 +220,12 @@ public class Main {
                                 System.out.println("Inserire la tipologia del prodotto");
                                 String tipologia2 =in.next();
 
-                                magazzino.addProdotto(new Piccolo(articolo2,codice2,quantita2,consumo,costoBase2,tipologia2));
-//                                try {
-//                                    magazzino.addProdotto(new Piccolo(articolo2,codice2,quantita2,consumo,costoBase2,tipologia2));
-//                                } catch (Exception e) {
-//                                    System.out.println(e.getMessage());
-//                                }
+//                                magazzino.addProdotto(new Piccolo(articolo2,codice2,quantita2,consumo,costoBase2,tipologia2));
+                                try {
+                                    magazzino.addProdotto(new Piccolo(articolo2,codice2,quantita2,consumo,costoBase2,tipologia2));
+                                } catch (Exception e) {
+                                    System.out.println(e.getMessage());
+                                }
                                 System.out.println("\n------------------------------\n"+"AGGIUNTO CON SUCCESSO"+"\n------------------------------\n");
                                 break;
                             case 3:
@@ -271,12 +271,12 @@ public class Main {
                                 System.out.println("Inserire il luogo di stoccaggio del prodotto");
                                 String luogoStoccaggio3 =in.next();
 
-                                magazzino.addProdotto(new Grande(articolo3,codice3,quantita3,consumo3,costoBase3,luogoStoccaggio3));
-//                                try {
-//                                    magazzino.addProdotto(new Grande(articolo3,codice3,quantita3,consumo3,costoBase3,luogoStoccaggio3));
-//                                } catch (Exception e) {
-//                                    System.out.println(e.getMessage());
-//                                }
+//                                magazzino.addProdotto(new Grande(articolo3,codice3,quantita3,consumo3,costoBase3,luogoStoccaggio3));
+                                try {
+                                    magazzino.addProdotto(new Grande(articolo3,codice3,quantita3,consumo3,costoBase3,luogoStoccaggio3));
+                                } catch (Exception e) {
+                                    System.out.println(e.getMessage());
+                                }
                                 System.out.println("\n------------------------------\n"+"AGGIUNTO CON SUCCESSO"+"\n------------------------------\n");
 
                                 break;
